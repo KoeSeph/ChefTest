@@ -9,9 +9,12 @@ platforms:
   - name: ubuntu-12.04
   - name: ubuntu-10.04
   - name: centos-6.4
-
 suites:
   - name: default
     run_list:
-      - recipe[gitThing::default]
+      - recipe[git::default]
+    attributes:
+  - name: server
+    run_list:
+      - recipe[git::server]
     attributes:
